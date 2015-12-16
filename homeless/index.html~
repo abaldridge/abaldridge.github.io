@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+<img class="img-responsive" src="lincoln.png" alt="lincoln graphic">
+    <h6>As the economy continues to recover from the 2008 recession, homelessness continues to be an issue. Although the Nebraska homelessness average is down about 3% statewide as you can see in the chart below, Lincoln's homeless problem is only increasing. </h6>
+<img class="img-responsive" src="homelessamerica.jpg" alt="american homeless graphic">
+<h6>Lincoln's homeless population has steadily risen. A study done by the Lincoln Homeless Coalition shows that 53% of Lincoln homeless live in transitional housing, 36% live in emergency shelter, and the remaining 11% live completely unsheltered.
+The below charts were created to illustrate the afformentiioned study, they only show the number of <i>sheltered</i> homeless people.</h6>
+<img class="img-responsive" src="lincoln1.jpg" alt="lincoln homeless graphic">
+<img class="img-responsive" src="lincoln2.jpg" alt="lincoln nebraska homeless graphic">
+<br>
+<br>
+
+<p> It's hard to say if the decline in Lincoln's unemployment rate (which was 2.1% as of April 2015) will help see a change in the number of homeless. Luckily Lincoln, Nebraska has quite a few resources that are very accessible for those who are in need.</p>
+<br>
+<img class="img-responsive" src="help.jpg" alt="martin luther homeless graphic">
+
+{% for row in data %}
+
+<p>  
+  <h3 align="left">{{ row.name }}</h3>
+<h6>Services:</h6> <i>{{ row.services }}</i>
+<h6>Location:</h6> {{ row.location }}
+<h6>Contact:</h6> {{ row.phonenumber }}
+</p>
+</body>
+{% endfor %}
+
+
+  </div>
+</div>
+{% endblock content %}
+
